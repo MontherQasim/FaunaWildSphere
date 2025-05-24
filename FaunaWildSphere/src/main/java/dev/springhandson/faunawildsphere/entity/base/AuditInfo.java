@@ -5,21 +5,23 @@ import jakarta.persistence.MappedSuperclass;
 import jakarta.persistence.EntityListeners;
 import jakarta.persistence.Column;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.NonNull;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import java.time.LocalDateTime;
 
 @MappedSuperclass
 @EntityListeners(AuditListener.class)
+@NoArgsConstructor
+@AllArgsConstructor
+@SuperBuilder
 @Getter
 @Setter
 public abstract class AuditInfo {
 
     @Column(name = "created_at", updatable = false)
     @Basic(optional = false)
-    @NonNull    private LocalDateTime createdAt;
+    private LocalDateTime createdAt;
 
 
     @Column(name = "updated_at")

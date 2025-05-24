@@ -4,6 +4,7 @@ import dev.springhandson.faunawildsphere.entity.base.AuditInfo;
 import dev.springhandson.faunawildsphere.entity.type.HealthStatus;
 import dev.springhandson.faunawildsphere.entity.type.LifeStatus;
 import dev.springhandson.faunawildsphere.entity.type.Species;
+import lombok.experimental.SuperBuilder;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import lombok.*;
@@ -15,13 +16,15 @@ import java.time.Period;
 @EqualsAndHashCode(callSuper = false)
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "AnimalType", discriminatorType = DiscriminatorType.STRING)
+@SuperBuilder
 @ToString(exclude = {"biography", "deathDetails"})
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public abstract class Animal extends AuditInfo {
+
+public abstract class Animal extends  AuditInfo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
