@@ -1,4 +1,4 @@
-package dev.springhandson.faunawildsphere.entity;
+package dev.springhandson.faunawildsphere.entity.base;
 
 import jakarta.persistence.*;
 

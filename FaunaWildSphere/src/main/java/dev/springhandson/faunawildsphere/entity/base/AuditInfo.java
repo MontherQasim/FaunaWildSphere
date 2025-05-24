@@ -1,5 +1,6 @@
-package dev.springhandson.faunawildsphere.entity;
+package dev.springhandson.faunawildsphere.entity.base;
 
+import jakarta.persistence.Basic;
 import jakarta.persistence.MappedSuperclass;
 import jakarta.persistence.EntityListeners;
 import jakarta.persistence.Column;
@@ -16,12 +17,15 @@ import java.time.LocalDateTime;
 @Setter
 public abstract class AuditInfo {
 
-    @Column(name="Created At: ", updatable = false)
-    @NonNull
-    private LocalDateTime createdAt;
-    @Column(name="Created At: ")
+    @Column(name = "created_at", updatable = false)
+    @Basic(optional = false)
+    @NonNull    private LocalDateTime createdAt;
+
+
+    @Column(name = "updated_at")
     private LocalDateTime updatedAt;
-    @Column(name="Deleted At: ")
+
+    @Column(name = "deleted_at")
     private LocalDateTime deletedAt;
     private boolean isDeleted;
 
