@@ -1,4 +1,4 @@
-package dev.springhandson.faunawildsphere.entity;
+package dev.springhandson.faunawildsphere.entity.database;
 
 import dev.springhandson.faunawildsphere.entity.base.AuditInfo;
 import dev.springhandson.faunawildsphere.entity.type.HealthStatus;

@@ -1,10 +1,10 @@
 package dev.springhandson.faunawildsphere;
 
 import dev.springhandson.faunawildsphere.config.Config;
-import dev.springhandson.faunawildsphere.entity.Lion;
-import dev.springhandson.faunawildsphere.entity.Tiger;
-import dev.springhandson.faunawildsphere.repository.LionRepository;
-import dev.springhandson.faunawildsphere.repository.TigerRepository;
+import dev.springhandson.faunawildsphere.entity.database.Lion;
+import dev.springhandson.faunawildsphere.entity.database.Tiger;
+import dev.springhandson.faunawildsphere.repository.entityProjection.LionRepository;
+import dev.springhandson.faunawildsphere.repository.entityProjection.TigerRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

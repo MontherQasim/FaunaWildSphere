@@ -1,7 +1,7 @@
 package dev.springhandson.faunawildsphere.config;
 
-import dev.springhandson.faunawildsphere.entity.Lion;
-import dev.springhandson.faunawildsphere.entity.Tiger;
+import dev.springhandson.faunawildsphere.entity.database.Lion;
+import dev.springhandson.faunawildsphere.entity.database.Tiger;
 import dev.springhandson.faunawildsphere.entity.type.HealthStatus;
 import dev.springhandson.faunawildsphere.entity.type.LifeStatus;
 import dev.springhandson.faunawildsphere.entity.type.Species;
@@ -9,7 +9,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 @Configuration
 public class Config {
